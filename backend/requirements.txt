@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+pydantic-settings
+sqlalchemy>=2
+aiosqlite
+httpx
+python-multipart
+reportlab
+pillow
+anthropic
+google-genai
+openai
+pytest
+pytest-asyncio
+websockets
