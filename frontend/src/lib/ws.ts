@@ -1,2 +1,0 @@
-// Lib: ws (stub)
-export {};
