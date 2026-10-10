@@ -1,8 +1,26 @@
 # 🛡️ Scam Shield
 
-**A real-time scam co-pilot for India.** Scam Shield sits next to a vulnerable user, spots digital-arrest, fake-KYC and UPI fraud in **Hindi, English and Hinglish**, warns them out loud in their own language, and pulls in their family before the money moves.
+**A real-time scam co-pilot for India.** Scam Shield sits next to a vulnerable user, spots digital-arrest, fake-KYC and UPI fraud in **Hindi, English and Hinglish**, warns them out loud in their own language, and alerts their family before the money moves.
 
-> Built for elderly and first-time digital users: big buttons, plain words, a spoken warning, and a family "guardian" who gets alerted on Telegram.
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> Built for elderly and first-time digital users: big buttons, plain words, a spoken warning, and a family "guardian" who is alerted on Telegram.
+
+<!-- Add screenshots to docs/screenshots/ and uncomment:
+<p align="center">
+  <img src="docs/screenshots/home.png" width="220" alt="Home">
+  <img src="docs/screenshots/check.png" width="220" alt="Message check">
+  <img src="docs/screenshots/warning.png" width="220" alt="Live call warning">
+</p>
+-->
+
+---
+
+## 📑 Contents
+[Features](#-features) · [How it works](#-how-it-works) · [Quick start](#-quick-start) · [Demo](#-90-second-demo) · [Configuration](#️-configuration) · [API](#-api-overview) · [Tests](#-tests) · [Privacy](#-privacy--security) · [Limits](#️-limits-said-honestly) · [Roadmap](#️-roadmap)
 
 ---
 
@@ -10,19 +28,17 @@
 
 | | Feature | What it does |
 |---|---|---|
-| 🔍 | **Message & screenshot check** | Paste a text or upload a screenshot. Get a verdict (SAFE / SUSPICIOUS / SCAM), a 0-100 risk score, highlighted evidence and simple next steps in English and Hindi. |
+| 🔍 | **Message & screenshot check** | Paste a text or upload a screenshot. Get SAFE / SUSPICIOUS / SCAM, a 0-100 risk score, highlighted evidence and simple next steps in English and Hindi. |
 | 🎙️ | **Live call listener** | Listens through the device mic (speakerphone), scores the call as it unfolds, and fires a full-screen warning with a **spoken Hindi/English alert**. |
 | 👨‍👩‍👧 | **Guardian loop** | Alerts a linked family member on Telegram with the evidence. If nobody taps "I am calling them" in time, it **escalates to a backup guardian**. |
 | 📄 | **One-tap complaint PDF** | Evidence pack with signal timeline, numbers and UPI IDs found, and the 1930 / cybercrime.gov.in steps. |
-| 🧠 | **Weighted "what are they asking for?" detection** | Asking for an OTP, PIN, CVV, card number, bank details, Aadhaar, etc. adds risk points per item. Protective wording ("never share your OTP") is ignored. |
-| 🔗 | **Link / number / UPI checker** | Offline checks for fake bank look-alike sites, APK links, shorteners, foreign numbers, scammy UPI names, plus a community blocklist. |
+| 🧠 | **"What are they asking for?" scoring** | Asking for an OTP, PIN, CVV, card number, bank details, Aadhaar etc. adds risk points per item. Protective wording ("never share your OTP") is ignored. |
+| 🔗 | **Link / number / UPI checker** | Offline checks for fake bank look-alike sites, APK links, shorteners, foreign numbers and scammy UPI names, plus a community blocklist. |
 | 🎭 | **Practice mode** | An AI plays a fictional scammer; a coach tells you whether each reply was safe. |
 | 📊 | **Impact dashboard** | Scams caught by type, day and language. Money saved is clearly labelled an **estimate**. |
 | 🔒 | **Privacy by design** | Audio is never sent or stored. Text is kept only if the user opts in, and auto-purged after 24 h. |
 
-### Scam types detected
-
-Digital arrest · fake KYC / bank call · UPI collect & QR tricks · remote-access apps (AnyDesk etc.) · courier/parcel · lottery & prize · investment · fake jobs/tasks · fake bill-disconnection · "relative on a new number" · sextortion · loan-app fee scams.
+**Scam types detected:** digital arrest · fake KYC / bank call · UPI collect & QR tricks · remote-access apps (AnyDesk etc.) · courier/parcel · lottery & prize · investment · fake jobs/tasks · fake bill-disconnection · "relative on a new number" · sextortion · loan-app fee scams.
 
 ---
 
@@ -53,7 +69,7 @@ flowchart LR
 
 ### The risk-word table
 
-What a scammer *asks for* decides the score. The weights live in [`backend/app/data/scam_patterns.json`](backend/app/data/scam_patterns.json) under `credential_items`, so you can tune them without touching code.
+What a scammer *asks for* decides the score. Weights live in [`backend/app/data/scam_patterns.json`](backend/app/data/scam_patterns.json) under `credential_items`, so you can tune them without touching code.
 
 | Asked for | Points | | Asked for | Points |
 |---|---|---|---|---|
@@ -79,6 +95,11 @@ Items only count when there is a request ("give me", "share", "batao", "bhejo"�
 
 You need **Node 18+**, **Python 3.11+** and **Chrome**.
 
+```bash
+git clone https://github.com/kavyansh-1/scam-shield.git
+cd scam-shield
+```
+
 ### 1. Backend
 
 ```bash
@@ -89,9 +110,9 @@ python -m pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
 
-Open http://localhost:8000/docs to see every endpoint. It works with an **empty `.env`** (mock mode).
+Open http://localhost:8000/docs to see every endpoint. It works with **no `.env` at all** (mock mode).
 
-### 2. Frontend
+### 2. Frontend (new terminal)
 
 ```bash
 cd frontend
@@ -104,15 +125,25 @@ Open http://localhost:3000.
 
 > **No backend yet?** Set `NEXT_PUBLIC_MOCK=1` in `frontend/.env.local` to click through every page with built-in sample data.
 
-### 3. Try the demo
+---
 
-Go to **http://localhost:3000/live?demo=hinglish**. A fake CBI "digital arrest" call replays through the same WebSocket. The risk meter climbs, signals appear, and the warning overlay fires with a spoken alert about 16 seconds in.
+## 🎬 90-second demo
+
+1. Open the problem in one sentence: **"digital arrest"**, where a fake CBI officer keeps you on a video call and demands money.
+2. Go to **http://localhost:3000/live?demo=hinglish**. A fake CBI call replays and the transcript scrolls.
+3. Watch the **risk meter climb** and signals appear (authority, threat, secrecy, remote access).
+4. About 16 seconds in, the **warning overlay fires** with a spoken Hindi alert and "your family has been alerted".
+5. Open **Family → Guardian view**, tap the acknowledge button.
+6. Tap **Download complaint PDF**.
+7. Show the **Dashboard**, then **Practice mode**.
+
+Fallback if Wi-Fi or the mic fails: replay mode needs neither (Chrome, local servers only).
 
 ---
 
 ## ⚙️ Configuration
 
-Backend settings are read from a `.env` file in the repo root (or `backend/`). All are optional.
+The backend works with no configuration. To customise, copy [`.env.example`](.env.example) to `.env` in the repo root.
 
 | Variable | Default | Purpose |
 |---|---|---|
@@ -172,20 +203,22 @@ scam-shield/
 ├── backend/
 │   ├── app/
 │   │   ├── api/          REST + WebSocket routes
-│   │   ├── agents/       orchestrator (live loop), guardian, coach, event bus
+│   │   ├── agents/       live-call orchestrator, guardian, coach, event bus
 │   │   ├── detection/    rules, entities, scoring, link checks, explanations
 │   │   ├── llm/          provider clients, mock client, prompts
 │   │   ├── services/     telegram, pdf_report, ocr, blocklist, purge
 │   │   ├── models/       schemas + database tables
 │   │   └── data/         scam_patterns.json, blocklist seed, demo calls
-│   └── tests/            pytest suite (105 tests)
+│   └── tests/            pytest suite
 ├── frontend/
 │   └── src/
 │       ├── app/          pages: home, check, live, guardian, dashboard, practice, report
 │       ├── components/   RiskMeter, WarningOverlay, ResultCard, …
 │       ├── hooks/        speech recognition, TTS, live socket
 │       └── lib/          api client (with mock mode), i18n, types
-└── docs/                 CONTRACT.md and notes
+├── docs/                 CONTRACT.md (API contract)
+├── .env.example
+└── LICENSE
 ```
 
 ---
@@ -208,7 +241,7 @@ Frontend type check: `cd frontend && npx tsc --noEmit`.
 - **Audio never leaves the device.** Only text is analysed.
 - Raw messages and transcripts are saved **only if the user opts in**, and are purged after `DATA_TTL_HOURS`.
 - The PDF includes the transcript only if the user chose to save it.
-- **Never commit `.env`.** It is already in `.gitignore`. If a key was ever pushed, revoke it at the provider and remove it from git history.
+- **Never commit `.env`.** It is listed in `.gitignore`. If a key was ever pushed, revoke it at the provider and remove it from git history.
 
 ---
 
@@ -219,7 +252,7 @@ Frontend type check: `cd frontend && npx tsc --noEmit`.
 - Detection is rules-first and tuned for common Indian scam patterns. It is a safety aid, **not a guarantee**. The PDF is a generated aid, **not an FIR**.
 - The "money saved" figure is a configurable estimate, not measured savings.
 - PDF Hindi text depends on a Devanagari font being present on the machine.
-- Not yet included: a labelled evaluation dataset with precision/recall numbers.
+- Not yet included: a labelled evaluation dataset with precision / recall numbers.
 
 ---
 
@@ -242,4 +275,4 @@ Call **1930** (national cyber crime helpline) immediately, report at **cybercrim
 
 ## 📜 License
 
-Add your license here (for example MIT).
+[MIT](LICENSE) © 2026 kavyansh-1
