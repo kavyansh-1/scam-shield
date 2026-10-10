@@ -1,1 +1,415 @@
-[]
+{
+ "signals": {
+  "authority_impersonation": [
+   "\\bcbi\\b",
+   "\\benforcement directorate\\b",
+   "\\bcyber ?crime\\b",
+   "\\btrai\\b",
+   "\\bcustoms?\\b",
+   "\\bnarcotics\\b",
+   "\\bncb\\b",
+   "\\bpolice\\b",
+   "\\bpulis\\b",
+   "\\bcourt\\b",
+   "\\bwarrant\\b",
+   "\\b(?:fedex|dhl|blue ?dart)\\b",
+   "money ?laundering",
+   "\\binspector\\b",
+   "\\bsupreme court\\b",
+   "\\bincome tax (?:officer|department)\\b",
+   "\\bdepartment of telecom\\b",
+   "सीबीआई",
+   "पुलिस",
+   "साइबर क्राइम",
+   "कस्टम",
+   "नारकोटिक्स",
+   "वारंट",
+   "ट्राई",
+   "अदालत",
+   "मनी लॉन्ड्रिंग",
+   "फेडेक्स",
+   "इंस्पेक्टर",
+   "\\bc[ .\\-_]b[ .\\-_]i\\b",
+   "\\bcb1\\b"
+  ],
+  "urgency_threat": [
+   "\\barrest(?:ed)?\\b",
+   "\\b(?:giraft|girft|grift|girrft)\\w*",
+   "\\bturant\\b",
+   "\\bimmediately\\b",
+   "\\bwithin \\d+ ?(?:minutes?|mins?|hours?|hrs?)\\b",
+   "\\b\\d+ ?(?:minute|min|ghante|ghanta)\\w* (?:ke )?(?:andar|mein|me)\\b",
+   "\\blast warning\\b",
+   "\\baccount (?:will be )?(?:block|blocked|band|suspend\\w*|freez\\w*)",
+   "\\bsim (?:will be )?(?:block\\w*|band|deactivat\\w*)",
+   "\\blegal action\\b",
+   "\\bjail\\b",
+   "गिरफ्तार",
+   "गिरफ़्तार",
+   "तुरंत",
+   "फौरन",
+   "ब्लॉक हो",
+   "बंद हो जाएगा",
+   "जेल",
+   "आखिरी चेतावनी",
+   "मिनट के अंदर",
+   "कानूनी कार्रवाई"
+  ],
+  "isolation": [
+   "kisi (?:ko|se) (?:kuch |bhi )?(?:mat|na|nahi) (?:batana|batayen|batayein|batao|bataye|bataiye|bolna|kehna|baat karna)",
+   "\\b(?:do not|don'?t|dont) tell (?:anyone|anybody|any one|your family|your friends)",
+   "\\b(?:stay|remain|keep) on (?:the )?(?:video )?(?:call|line)\\b",
+   "\\bvideo call par rehna\\b",
+   "call mat (?:kaat|kat|cut|disconnect)\\w*",
+   "\\bdo not (?:cut|disconnect|hang up)\\b",
+   "\\bconfidential\\b",
+   "\\bkeep (?:it|this) (?:a )?secret\\b",
+   "\\bfamily ko (?:mat|na)\\b",
+   "किसी को (?:कुछ )?(?:मत|न|नहीं) (?:बताना|बताएं|बताएँ|बताओ|बोलना)",
+   "कॉल मत काट",
+   "वीडियो कॉल पर (?:बने रहें|रहना|रहिए)",
+   "गोपनीय"
+  ],
+  "remote_access": [
+   "\\banydesk\\b",
+   "\\bteam ?viewer\\b",
+   "\\bquick ?support\\b",
+   "\\brust ?desk\\b",
+   "\\bscreen ?(?:sharing|share)\\b",
+   "\\bapp (?:download|install) (?:karo|kijiye|kare|karein)\\b",
+   "\\b(?:download|install) (?:karo|kijiye|kare|karein) (?:ye |is |yeh )?app\\b",
+   "\\bremote access\\b",
+   "\\b(?:9|nine)[ -]?digit code\\b",
+   "एनीडेस्क",
+   "टीमव्यूअर",
+   "स्क्रीन शेयर",
+   "ऐप डाउनलोड कर"
+  ],
+  "payment_demand": [
+   "\\bsafe account\\b",
+   "\\brbi (?:safe |secure )?account\\b",
+   "\\bverification (?:deposit|amount|fee)\\b",
+   "\\brefundable\\b",
+   "\\btransfer karo\\b",
+   "\\bpaisa (?:transfer|bhej\\w*)\\b",
+   "\\bpaise (?:transfer|bhej\\w*)\\b",
+   "\\btransfer (?:the )?(?:money|amount|funds)\\b",
+   "\\b(?:processing|registration|clearance|release|customs) (?:fee|charge)s?\\b",
+   "\\bpay (?:a )?(?:fine|penalty|bail)\\b",
+   "\\bdouble your money\\b",
+   "\\bguaranteed returns?\\b",
+   "\\bsecurity deposit\\b",
+   "\\b(?:deposit|jama) karo\\b",
+   "सेफ अकाउंट",
+   "आरबीआई (?:सेफ )?अकाउंट",
+   "वेरिफिकेशन (?:डिपॉजिट|राशि)",
+   "ट्रांसफर कर",
+   "पैसे (?:भेजो|भेजें|ट्रांसफर)",
+   "जुर्माना",
+   "जमानत",
+   "रिफंडेबल",
+   "\\bpay (?:me |us |him |her )?(?:rs\\.?|₹|inr|rupees?)\\s*\\d",
+   "\\b(?:send|transfer|deposit) (?:me |us )?(?:rs\\.?|₹|inr|rupees?)\\s*\\d",
+   "\\b(?:rs\\.?|₹|inr)\\s*\\d[\\d,]*\\s*(?:pay|bhejo|bhej do|transfer karo|jama karo)\\b"
+  ],
+  "credential_request": [
+   "\\botp\\b",
+   "\\bupi ?pin\\b",
+   "\\bm-?pin\\b",
+   "\\bcvv\\b",
+   "\\baadh?aa?r\\b",
+   "\\bpan (?:card|number|no)\\b",
+   "\\bnet ?banking (?:password|id|login)\\b",
+   "\\bpassword\\b",
+   "\\bcard number\\b",
+   "\\batm pin\\b",
+   "ओटीपी",
+   "यूपीआई पिन",
+   "सीवीवी",
+   "आधार",
+   "पासवर्ड",
+   "एटीएम पिन",
+   "पिन नंबर",
+   "\\bo[ .\\-_]t[ .\\-_]p\\b",
+   "\\b0tp\\b"
+  ],
+  "suspicious_link_or_apk": [
+   "\\.apk\\b",
+   "\\b(?:bit\\.ly|tinyurl\\.com|cutt\\.ly|rb\\.gy|t\\.co|goo\\.gl|is\\.gd|shorturl\\.at)/\\S+",
+   "\\bkyc (?:update )?link\\b",
+   "\\b(?:click|tap|open) (?:on )?(?:the |this )?(?:below )?link\\b",
+   "https?://\\S+\\.(?:xyz|top|club|online|site|icu|live|vip|cc)\\b",
+   "लिंक पर क्लिक",
+   "एपीके"
+  ],
+  "upi_collect_trick": [
+   "\\bcollect request\\b",
+   "\\benter (?:your )?(?:upi )?pin to (?:receive|get|accept|credit)\\b",
+   "\\b(?:refund|cashback|receive|prize|inaam)\\b[^.\\n]{0,40}\\b(?:upi )?pin\\b",
+   "\\bpin\\b[^.\\n]{0,40}\\b(?:to receive|to get|receive karne|paise (?:aane|milne)|refund)\\b",
+   "रिफंड के लिए पिन",
+   "कलेक्ट रिक्वेस्ट",
+   "\\bscan (?:this |the )?qr(?: code)? (?:to|and) (?:receive|get|accept|claim)"
+  ]
+ },
+ "protective": [
+  "\\b(?:do not|don'?t|dont|never|not) (?:to )?(?:share|disclose|reveal|give|tell)\\b",
+  "\\b(?:will )?never ask\\b",
+  "\\bshare (?:mat|na) kar\\w*",
+  "\\bkisi (?:ko|ke saath) (?:na|mat) (?:batayein|batayen|bataiye|batana|share)\\w*",
+  "\\bkabhi share nahi\\b",
+  "\\bshare nahi kar\\w*",
+  "साझा न करें",
+  "शेयर न करें",
+  "किसी को न बताएं",
+  "किसी को न बताएँ",
+  "कभी न बताएं",
+  "कभी शेयर न",
+  "किसी से साझा न"
+ ],
+ "cred_words": "otp|\\bpin\\b|cvv|password|ओटीपी|पासवर्ड|पिन|aadhaar|aadhar|card number",
+ "otp_informational": [
+  "\\d{4,8}\\s+is\\s+(?:your|the)\\s+(?:otp|one[- ]time)",
+  "\\b(?:otp|code)\\s+(?:is|for)\\s+\\d{4,8}",
+  "\\botp\\s+for\\b",
+  "\\bvalid for \\d+",
+  "\\buse\\s+\\d{4,8}\\b",
+  "\\byour otp\\b[^.\\n]{0,20}\\b(?:is|:)"
+ ],
+ "lures": {
+  "courier": "fedex|\\bdhl\\b|parcel|courier|blue ?dart|customs",
+  "kyc": "\\bkyc\\b|know your customer",
+  "bank": "\\b(?:sbi|hdfc|icici|axis bank|pnb|kotak|state bank|bank of baroda|rbi)\\b|your bank|bank (?:officer|manager|executive|team|official|representative)|customer care"
+ },
+ "families": {
+  "lottery": {
+   "scam_type": "lottery_prize",
+   "weight": 20,
+   "patterns": [
+    "lottery",
+    "lucky draw",
+    "\\byou (?:have )?won\\b",
+    "\\bkbc\\b",
+    "jackpot",
+    "prize money",
+    "lucky winner",
+    "\\binaam\\b",
+    "इनाम",
+    "लॉटरी"
+   ]
+  },
+  "investment": {
+   "scam_type": "investment",
+   "weight": 20,
+   "patterns": [
+    "guaranteed returns?",
+    "double your money",
+    "trading tips",
+    "stock tips",
+    "\\bcrypto (?:profit|investment|trading)",
+    "\\d+% (?:daily|weekly|monthly) returns?",
+    "high returns?",
+    "investment (?:opportunity|scheme)",
+    "vip (?:telegram|whatsapp) group"
+   ]
+  },
+  "job_task": {
+   "scam_type": "job_task",
+   "weight": 20,
+   "patterns": [
+    "work from home",
+    "part[- ]time job",
+    "\\bearn (?:rs\\.? ?)?\\d[\\d,]* ?(?:/-)? ?(?:daily|per day|a day|every day)",
+    "like (?:and )?subscribe",
+    "youtube (?:videos?|likes?)",
+    "\\btasks? (?:and|&) (?:earn|get paid|commission)",
+    "data entry job",
+    "ghar baithe",
+    "घर बैठे"
+   ]
+  },
+  "utility": {
+   "scam_type": "utility_disconnect",
+   "weight": 20,
+   "patterns": [
+    "(?:electricity|bijli|power|gas|water) (?:bill|connection|supply|meter)\\W+(?:\\w+\\W+){0,8}?(?:disconnect|cut|band|suspend|terminate)\\w*",
+    "(?:disconnect|cut|band)\\w* (?:tonight|aaj raat)",
+    "बिजली[^.\n]{0,30}कट"
+   ]
+  },
+  "family": {
+   "scam_type": "family_emergency",
+   "weight": 15,
+   "patterns": [
+    "\\bthis is my new number\\b",
+    "\\bmy new number\\b",
+    "\\bnumber (?:change|badal)\\w*",
+    "\\bmy phone (?:is )?(?:broken|lost|damaged|not working)\\b",
+    "\\bnaya number\\b"
+   ]
+  },
+  "sextortion": {
+   "scam_type": "sextortion",
+   "weight": 25,
+   "patterns": [
+    "(?:nude|naked|obscene|intimate|private) (?:video|photo|pic|image)s?",
+    "(?:viral|leak|upload|post)\\w* (?:your )?(?:video|photos?|pics?)",
+    "(?:video call|call) recording",
+    "screen ?recording",
+    "(?:video|recording)\\W+(?:\\w+\\W+){0,6}?(?:contacts|friends|family|relatives)"
+   ]
+  },
+  "loan": {
+   "scam_type": "loan_app",
+   "weight": 20,
+   "patterns": [
+    "(?:instant|quick|easy|pre[- ]approved) loan",
+    "loan app",
+    "\\bno (?:cibil|documents?|collateral)\\b",
+    "(?:contact list|gallery|contacts) (?:access|permission)"
+   ]
+  },
+  "refund_claim": {
+   "scam_type": "other",
+   "weight": 15,
+   "patterns": [
+    "income tax refund",
+    "itr refund",
+    "e-?challan",
+    "traffic (?:fine|challan)",
+    "fastag (?:blocked|kyc|expired)",
+    "policy (?:bonus|maturity)",
+    "gas subsidy",
+    "pm[- ]?kisan"
+   ]
+  },
+  "army": {
+   "scam_type": "other",
+   "weight": 15,
+   "patterns": [
+    "\\b(?:army|crpf|cisf|bsf|military|navy|airforce) (?:officer|jawan|personnel|man)\\b",
+    "transferred to another city"
+   ]
+  }
+ },
+ "credential_items": {
+  "otp": {
+   "weight": 45,
+   "secret": true,
+   "patterns": [
+    "\\bo[ .\\-_]?t[ .\\-_]?p\\b",
+    "\\b0tp\\b",
+    "ओटीपी",
+    "one[- ]time (?:password|pin|code)",
+    "verification code"
+   ]
+  },
+  "pin": {
+   "weight": 50,
+   "secret": true,
+   "patterns": [
+    "\\bupi ?pin\\b",
+    "\\bm-?pin\\b",
+    "\\batm pin\\b",
+    "\\bpin number\\b",
+    "\\bpin\\b(?! ?code)",
+    "यूपीआई पिन",
+    "एटीएम पिन",
+    "पिन(?! ?कोड)"
+   ]
+  },
+  "cvv": {
+   "weight": 45,
+   "secret": true,
+   "patterns": [
+    "\\bcvv\\b",
+    "\\bcvc\\b",
+    "सीवीवी",
+    "security code"
+   ]
+  },
+  "card": {
+   "weight": 40,
+   "secret": true,
+   "patterns": [
+    "card (?:number|no\\.?|details?)",
+    "debit card",
+    "credit card",
+    "atm card",
+    "कार्ड नंबर",
+    "कार्ड डिटेल"
+   ]
+  },
+  "password": {
+   "weight": 40,
+   "secret": true,
+   "patterns": [
+    "password",
+    "passcode",
+    "login (?:id|details?)",
+    "net ?banking (?:id|login|details?)",
+    "पासवर्ड"
+   ]
+  },
+  "bank_details": {
+   "weight": 25,
+   "secret": false,
+   "patterns": [
+    "bank (?:account )?details?",
+    "account (?:number|no\\.?|details?)",
+    "a/c (?:number|no\\.?)",
+    "खाता नंबर",
+    "अकाउंट नंबर",
+    "बैंक डिटेल"
+   ]
+  },
+  "aadhaar": {
+   "weight": 35,
+   "secret": false,
+   "patterns": [
+    "\\baadh?aa?r\\b",
+    "आधार"
+   ]
+  },
+  "pan": {
+   "weight": 30,
+   "secret": false,
+   "patterns": [
+    "\\bpan (?:card|number|no)\\b"
+   ]
+  },
+  "expiry": {
+   "weight": 15,
+   "secret": false,
+   "patterns": [
+    "expiry(?: date)?",
+    "valid thru",
+    "एक्सपायरी"
+   ]
+  },
+  "customer_id": {
+   "weight": 20,
+   "secret": false,
+   "patterns": [
+    "customer id"
+   ]
+  },
+  "ifsc": {
+   "weight": 10,
+   "secret": false,
+   "patterns": [
+    "\\bifsc(?: code)?\\b"
+   ]
+  },
+  "id_photo": {
+   "weight": 20,
+   "secret": false,
+   "patterns": [
+    "selfie",
+    "photo of (?:your )?(?:card|aadhaar|aadhar|pan|id)",
+    "passbook",
+    "cheque (?:photo|image)"
+   ]
+  }
+ }
+}

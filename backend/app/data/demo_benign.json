@@ -1,0 +1,54 @@
+{
+ "turns": [
+  {
+   "delay_ms": 1800,
+   "speaker": "scammer",
+   "text": "Hello, this is Asha from Sample Bank customer care. Am I speaking with the account holder?"
+  },
+  {
+   "delay_ms": 1500,
+   "speaker": "victim",
+   "text": "Yes, speaking."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "You called us this morning about a failed card payment. I am calling back about that."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "victim",
+   "text": "Yes, the payment of two thousand rupees did not go through."
+  },
+  {
+   "delay_ms": 2400,
+   "speaker": "scammer",
+   "text": "I can see the payment was declined at the merchant. No money was deducted from your account."
+  },
+  {
+   "delay_ms": 1700,
+   "speaker": "victim",
+   "text": "Okay, so I can try again?"
+  },
+  {
+   "delay_ms": 2400,
+   "speaker": "scammer",
+   "text": "Yes, you can. Please note, we will never ask for your OTP, PIN or CVV on a call."
+  },
+  {
+   "delay_ms": 1600,
+   "speaker": "victim",
+   "text": "Good to know. Thank you."
+  },
+  {
+   "delay_ms": 2500,
+   "speaker": "scammer",
+   "text": "If you have any other query, you can visit your nearest branch or call the number printed on your card."
+  },
+  {
+   "delay_ms": 1500,
+   "speaker": "victim",
+   "text": "Thank you, have a nice day."
+  }
+ ]
+}

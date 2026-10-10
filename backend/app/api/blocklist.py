@@ -1,14 +1,12 @@
-# API router: blocklist (stub; see docs/CONTRACT.md)
-from fastapi import APIRouter
-from fastapi.responses import JSONResponse
+from fastapi import APIRouter, Depends
+
+from ..core import rate_limit
+from ..models.schemas import BlocklistReportReq
+from ..services.blocklist import report_value
 
 router = APIRouter(prefix="/api/blocklist", tags=["blocklist"])
 
 
-def _nyi() -> JSONResponse:
-    return JSONResponse({"error": "not implemented", "code": "NOT_IMPLEMENTED"}, status_code=501)
-
-
-@router.post("/report")
-async def blocklist_0():
-    return _nyi()
+@router.post("/report", dependencies=[Depends(rate_limit)])
+async def report(b: BlocklistReportReq):
+    return {"value": b.value, "kind": b.kind, "reports": await report_value(b.value, b.kind)}

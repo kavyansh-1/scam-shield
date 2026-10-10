@@ -2,7 +2,8 @@ fastapi
 uvicorn[standard]
 pydantic>=2
 pydantic-settings
-sqlalchemy>=2
+sqlalchemy[asyncio]>=2
+greenlet
 aiosqlite
 httpx
 python-multipart

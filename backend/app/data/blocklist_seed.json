@@ -1,1 +1,6 @@
-[]
+[
+  {"value": "9999900001", "kind": "phone", "reports": 12},
+  {"value": "9999900002", "kind": "phone", "reports": 5},
+  {"value": "cbi.officer.test@ybl", "kind": "upi", "reports": 7},
+  {"value": "fake-kyc-update.example", "kind": "url", "reports": 9}
+]

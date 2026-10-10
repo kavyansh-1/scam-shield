@@ -1,14 +1,13 @@
-# API router: demo (stub; see docs/CONTRACT.md)
+import json
+from pathlib import Path
+from typing import Literal
+
 from fastapi import APIRouter
-from fastapi.responses import JSONResponse
 
 router = APIRouter(prefix="/api/demo", tags=["demo"])
-
-
-def _nyi() -> JSONResponse:
-    return JSONResponse({"error": "not implemented", "code": "NOT_IMPLEMENTED"}, status_code=501)
+_DIR = Path(__file__).parent.parent / "data"
 
 
 @router.get("/call")
-async def demo_0():
-    return _nyi()
+async def call(variant: Literal["hinglish", "english", "benign"] = "hinglish"):
+    return json.loads((_DIR / f"demo_{variant}.json").read_text(encoding="utf-8"))

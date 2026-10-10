@@ -1,0 +1,144 @@
+{
+ "turns": [
+  {
+   "delay_ms": 1500,
+   "speaker": "scammer",
+   "text": "Hello, main Inspector Rajiv Verma bol raha hoon, CBI cyber crime branch se."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Ji? Kaun? Kya hua sir?"
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Aapke naam par ek FedEx parcel Mumbai customs mein pakda gaya hai."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Parcel? Maine toh kuch mangwaya nahi."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Us parcel mein paanch passport, ek laptop aur 200 gram MDMA drugs mile hain."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Aapke Aadhaar se ye parcel book hua hai. Ye money laundering ka case hai."
+  },
+  {
+   "delay_ms": 2000,
+   "speaker": "victim",
+   "text": "Sir main ek simple aadmi hoon, mera isse koi lena dena nahi."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Aapke khilaaf arrest warrant nikal chuka hai. Aapko abhi giraftar kiya ja sakta hai."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Sir please aisa mat kijiye, main kya karun?"
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Ye bahut confidential case hai. Kisi ko mat batana, na family ko na dost ko."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Aapko video call par rehna hai, call mat kaatna warna turant police aa jayegi."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Theek hai sir, main call par hoon."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Main aapko CBI verification app bhej raha hoon, app download karo."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Play store se AnyDesk download karo aur 9 digit code mujhe batao."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Sir download ho gaya, code ye hai."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Ab aapka screen share ho raha hai, main aapke bank account verify karunga."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Aapke account mein jitna paisa hai, sab RBI ki jaanch ke liye dikhana padega."
+  },
+  {
+   "delay_ms": 1900,
+   "speaker": "victim",
+   "text": "Sir mere account mein sirf bachat ke paise hain."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Koi baat nahi, nirdosh sabit hone ke liye aapko verification deposit karna hoga."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Ye paisa RBI safe account mein transfer karo, jaanch ke baad refundable hai."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Kitna paisa transfer karna hoga sir?"
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Rs 4,85,000 abhi transfer karo, 30 minute ke andar warna giraftari pakki hai."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Sir itna paisa mere paas nahi hai."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "FD tod do, loan lo, lekin abhi transfer karo. Ye last warning hai."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Theek hai sir, main bank ja raha hoon."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Bank mein kisi ko kuch mat batana, bolna ghar ka kaam hai."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Account number likh lo: 0000 1234 5678, naam RBI Safe Account, IFSC FAKE0000001."
+  },
+  {
+   "delay_ms": 1500,
+   "speaker": "victim",
+   "text": "Ji sir, likh liya."
+  }
+ ]
+}

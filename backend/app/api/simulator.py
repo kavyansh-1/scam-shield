@@ -1,18 +1,21 @@
-# API router: simulator (stub; see docs/CONTRACT.md)
-from fastapi import APIRouter
-from fastapi.responses import JSONResponse
+from fastapi import APIRouter, Depends
 
-router = APIRouter(prefix="/api/simulator", tags=["simulator"])
+from ..agents import coach
+from ..core import ApiErr, rate_limit
+from ..models.schemas import SimStartReq, SimTurnReq
 
-
-def _nyi() -> JSONResponse:
-    return JSONResponse({"error": "not implemented", "code": "NOT_IMPLEMENTED"}, status_code=501)
+router = APIRouter(prefix="/api/simulator", tags=["simulator"], dependencies=[Depends(rate_limit)])
 
 
 @router.post("/start")
-async def simulator_0():
-    return _nyi()
+async def start(b: SimStartReq):
+    sid, msg = await coach.start(b.scenario, b.ui_lang)
+    return {"session_id": sid, "scammer_message": msg}
+
 
 @router.post("/turn")
-async def simulator_1():
-    return _nyi()
+async def turn(b: SimTurnReq):
+    out = await coach.turn(b.session_id, b.user_message)
+    if out is None:
+        raise ApiErr(404, "session_not_found", "Practice session not found. Please start again.")
+    return out

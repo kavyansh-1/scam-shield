@@ -1,0 +1,94 @@
+{
+ "turns": [
+  {
+   "delay_ms": 1500,
+   "speaker": "scammer",
+   "text": "Hello, this is Officer Mark Dsouza from the CBI cyber crime division."
+  },
+  {
+   "delay_ms": 1700,
+   "speaker": "victim",
+   "text": "Yes? What is this about?"
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "A FedEx parcel in your name was seized at customs with illegal items."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "I did not order any parcel."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Your Aadhaar was used. This is a money laundering case and a warrant is issued."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "You will be arrested immediately unless you cooperate with this investigation."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "Please, I have done nothing wrong."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "This is confidential. Do not tell anyone, not even your family."
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Stay on this video call and do not disconnect until I say so."
+  },
+  {
+   "delay_ms": 1700,
+   "speaker": "victim",
+   "text": "Okay, I am here."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Download AnyDesk from the app store so I can verify your phone."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "It is installed. What next?"
+  },
+  {
+   "delay_ms": 2200,
+   "speaker": "scammer",
+   "text": "Share the nine digit code. I will start screen sharing now."
+  },
+  {
+   "delay_ms": 2400,
+   "speaker": "scammer",
+   "text": "To prove your innocence, transfer a verification deposit to the RBI safe account."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "How much do I have to send?"
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Transfer Rs 3,50,000 within 30 minutes. It is fully refundable."
+  },
+  {
+   "delay_ms": 1800,
+   "speaker": "victim",
+   "text": "I need to go to the bank for that."
+  },
+  {
+   "delay_ms": 2300,
+   "speaker": "scammer",
+   "text": "Do not tell the bank staff the reason. This is your last warning."
+  }
+ ]
+}
