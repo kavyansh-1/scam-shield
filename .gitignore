@@ -10,3 +10,8 @@ node_modules/
 frontend/next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+!.env.example
+!.env.local.example
+*.log
+.vscode/
+.idea/
